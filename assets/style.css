@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* width: 100vw;
+  height: 100vh; */
+  margin: 0;
+  background-color: black;
+  color: #fff;
+}
+
+/* Floating Text MARQUEE EFFECT */
+.animated-title {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    position: relative;
+    /* width: 100%;
+    max-width:100%;
+    height: auto; */
+    padding-top: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+.animated-title .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 60s linear infinite;
+  }
+
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+@media (hover: hover) and (min-width: 700px){
+    .animated-title .content {
+      -webkit-transform: translateY(calc(100% - 8rem));
+      transform: translateY(calc(100% - 8rem));}
+  }
+
+.container {
+  display: grid;
+  margin: -20px 15px 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1rem;
+}
+
+.under {
+  text-decoration-line: underline;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.item2 {
+  grid-column: 1 / 3;
+}
+
+.item3 {
+  grid-column: 4 / 6;
+  border: 3px dashed;
+}
+
+.item4 {
+  grid-column: 4 / 6;
+}
+
+.item5 {
+  grid-column: 2 / 4;
+  border: 3px dashed;
+}
+
+.item6 {
+  grid-column: 1 / 4;
+}
+
+.item7 {
+  grid-column: 3 / 6;
+}
+
+.item8 {
+  grid-column: 2 / 5;
+  border: 3px dashed;
+}
+
+.item9 {
+  grid-column: 1 / 5;
+}
+
+.item10 {
+  border: 3px dashed;
+}
+
+.img01 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img02 {
+  width: 50%;
+  display : block;
+  margin : auto;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.img02:hover {
+  width: 50%;
+  display : block;
+  margin : auto;
+  object-fit: cover;
+  opacity: 1;
+}
+
+
+.content01 {
+  font-size: 4.3rem;
+  margin: 0 15px;
+}
+
+.content02 {
+
+  font-size: 1.5rem;
+  margin-top: -102px;
+  margin-left: 25px;
+  color: #fff;
+}
+
+.content03 {
+  font-size: 1.5rem;
+  margin-left: -250px;
+  color: #fff;
+}
+
+.content04 {
+  font-size: 1.5rem;
+  margin-top: 96px;
+  margin-left: -105px;
+  color: #fff;
+}
+
+.content05 {
+  font-size: 4.3rem;
+  margin: 0 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.content06 {
+  font-size: 6rem;
+  margin: 0 113px;
+  color: #fff;
+}
+
+.content07 {
+  font-size: 1.5rem;
+  margin: 0 64px;
+  text-align: center;
+  color: #fff;
+}
+
+.content08 {
+  font-size: 6rem;
+  margin: 0 64px;
+}
+
+.content09 {
+  font-size: 4.7rem;
+  margin-top: -174px;
+  margin-left: 5rem;
+}
+
+.content10 {
+  font-size: 2rem;
+  margin-top: -44px;
+  margin-left: -26.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.content11 {
+  font-size: 2rem;
+  margin-top: 115px;
+  margin-left: -13rem;
+  text-align: center;
+  color: #fff;
+}
+
+.content12 {
+  font-size: 2rem;
+  margin-top: 276px;
+  margin-left: -11rem;
+  text-align: center;
+  color: #fff;
+}
+
+.content13 {
+  font-size: 6rem;
+  margin: 0 92px;
+}
+
+
+article {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+
+article > a {
+  text-decoration-color: black;
+
+}
+
+article > a > p {
+  font-size: 2.5rem;
+  margin: 23px;
+  color: #fff;
+}
+
+.line {
+  position: absolute;
+  margin-top: -43px;
+  width: 100%;
+  border : 3px solid white;
+}
+
+.line02 {
+  position: absolute;
+  margin: 0;
+  /* margin-bottom: 0 50px:  */
+  width: 100%;
+  border : 3px solid white;
+}
+
+
+/* Floating Text MARQUEE EFFECT */
+.last-animated-title {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    position: relative;
+    /* width: 100%;
+    max-width:100%;
+    height: auto; */
+    padding-top: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+.last-animated-title .last-track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 60s linear infinite;
+  }
+
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+@media (hover: hover) and (min-width: 700px){
+    .last-animated-title .content {
+      -webkit-transform: translateY(calc(100% - 8rem));
+      transform: translateY(calc(100% - 8rem));}
+  }
+
+  .footer__copy {
+    display: block;
+    margin: 1.5rem 0 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+  }

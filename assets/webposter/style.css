@@ -1,0 +1,332 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5F5;
+  color: var(--primary);
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.875rem;
+}
+
+.logo h1 {
+  font-family: "PP Hatton Light";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1.125rem;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.875rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+main h2 {
+  font-family: "PP Hatton Light";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 4rem;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.logo h1 > span,
+main h2 > span {
+  font-family: "PP Hatton Medium";
+  font-weight: 500;
+  display: block;
+}
+
+.date {
+  position: absolute;
+  display: block;
+  /* top: 290px;
+  left: 120px; */
+  z-index: 100;
+}
+
+.date h1 {
+  position: relative;
+  top: 400px;
+  left: 1050px;
+  font-family: "PP Hatton Medium";
+  font-size: 55px;
+}
+
+.date h2 {
+  position: relative;
+  top: 395px;
+  left: 1105px;
+  font-family: "PP Hatton Medium";
+  font-size: 15px;
+}
+
+.grid {
+  position: absolute;
+  display: block;
+  top: 290px;
+  left: 120px;
+  z-index: 100;
+}
+
+a {
+	color: black;
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #fc2323;
+  bottom: 25px;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.oval {
+  display: block;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  background-color: white;
+  opacity: 1.0;
+  height: 420px;
+  width: 1000px;
+  border-radius: 50%;
+  border:  1px solid black;
+  z-index: 2;
+}
+
+.oval:hover {
+  border:  6px solid #70fc51;
+  opacity: 0.5;
+}
+
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.loader span {
+    position: absolute;
+    top: 225px;
+    left: 650px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.loader span:nth-child(2)
+{
+    background: #2BFAE4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+.loader span:nth-child(3)
+{
+    background: #FF51C8;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: -2s;
+    border-radius: 0;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translate(-200px, 200px) scale(0.4) rotate(0deg);
+        z-index: 1;
+    }
+    50%
+    {
+        transform: translate(200px, -200px) scale(0.4) rotate(180deg);
+        z-index: 1;
+    }
+    50.00001%
+    {
+        transform: translate(200px, -200px) scale(0.4) rotate(180deg);
+        z-index: 3;
+    }
+
+    100%
+    {
+        transform: translate(-200px, 200px) scale(0.4) rotate(360deg);
+        z-index: 3;
+    }
+}
+
+img {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+@font-face {
+  font-family: "PP Hatton Light";
+  src: url(https://preethi-dev.github.io/Modern-Layout-08/assets/fonts/PPHatton-Ultralight.otf);
+}
+
+@font-face {
+  font-family: "PP Hatton Medium";
+  src: url(https://preethi-dev.github.io/Modern-Layout-08/assets/fonts/PPHatton-Medium.otf);
+}
+
+/* Small Tablet Styles */
+@media screen and (min-width: 100px) {
+  main {
+    max-width: 690px;
+    margin: 0 auto;
+  }
+  main h2 {
+    font-size: 3rem;
+  }
+  a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #70fc51;
+    bottom: 8px;
+    left: 0;
+  }
+  .grid {
+  top: 350px;
+  left: 120px;
+  }
+
+  .oval {
+    top: 300px;
+    left: 135px;
+    height: 170px;
+    width: 450px;
+  }
+
+  .date {
+    top: 200px;
+    left: -835px;
+  }
+
+  img {
+    top: 130px;
+    left: 310px;
+  }
+}
+
+/* Large Tablet and Laptop Styles */
+@media screen and (min-width: 900px) {
+  main h2 {
+    font-size: 4.3rem;
+  }
+  a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #70fc51;
+    bottom: 12px;
+    left: 0;
+  }
+  .grid {
+  top: 310px;
+  left: 250px;
+  }
+
+  .oval {
+    top: 240px;
+    left: 285px;
+    height: 250px;
+    width: 610px;
+  }
+
+  .date {
+    top: 150px;
+    left: -300px;
+  }
+
+  img {
+    top: 110px;
+    left: 130px;
+  }
+}
+
+
+/* Desktop Styles */
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  main h2 {
+    font-size: 7rem;
+  }
+
+  a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: #70fc51;
+    bottom: 20px;
+    left: 0;
+  }
+
+  .grid {
+  top: 280px;
+  left: 170px;
+  }
+
+  .oval {
+  top: 166px;
+  left: 230px;
+  height: 420px;
+  width: 1000px;
+  }
+
+  .date {
+    top: 200px;
+    left: -10px;
+  }
+
+  img {
+    top: 110px;
+    left: 130px;
+  }
+}
